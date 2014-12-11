@@ -6,15 +6,21 @@ namespace RPGEngine{
 		Tile::Tile(int x, int y, int width, int height)
 		{
 			tile_sprite.setPosition(x, y);
-			tile_sprite.setTextureRect(sf::IntRect(0, 0, width, height));
+			this->tileWidth = width;
+			this->tileHeight = height;
+			//tile_sprite.setTextureRect(sf::IntRect(0, 0, width, height));
 		}
 
 		Tile::~Tile(){
 
 		}
 
-		void Tile::SetTilesheet(const sf::Texture& tilesheet){
-			tile_sprite.setTexture(tilesheet);
+		void Tile::SetTilesheet(const sf::Texture* tilesheet){
+			tile_sprite.setTexture(*tilesheet);
+		}
+
+		void Tile::SetSubRect(sf::IntRect rect){
+			tile_sprite.setTextureRect(rect);
 		}
 
 		void Tile::Render(sf::RenderWindow& window){

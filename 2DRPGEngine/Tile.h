@@ -13,7 +13,8 @@ namespace RPGEngine
 				void Render(sf::RenderWindow&);
 				void Update(sf::Time& time);
 				//void Load()
-				void SetTilesheet(const sf::Texture& tilesheet);
+				void SetTilesheet(const sf::Texture* tilesheet);
+				void SetSubRect(sf::IntRect rect);
 			private:
 				int x, y, tileWidth, tileHeight;
 				sf::Sprite tile_sprite;

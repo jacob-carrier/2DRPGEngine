@@ -5,6 +5,7 @@
 #include <SFML\System\Time.hpp>
 
 #include "Tile.h"
+#include "TiledMap.h"
 namespace RPGEngine
 {
 	public class Engine{
@@ -23,8 +24,7 @@ namespace RPGEngine
 			sf::Time elapsedTime;
 			sf::Clock clock;
 			sf::Event event;
-			Map::Tile* single_tile;
-			sf::Texture* tex;
+			RPGEngine::Map::TiledMap* map;
 			bool running;
 	};
 }
