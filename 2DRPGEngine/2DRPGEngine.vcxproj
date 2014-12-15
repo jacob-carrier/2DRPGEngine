@@ -84,8 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TiledMap.h" />
@@ -97,7 +101,11 @@
     <ClCompile Include="..\..\..\..\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="2DRPGEngine.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
