@@ -4,8 +4,9 @@
 #include <SFML\System\Clock.hpp>
 #include <SFML\System\Time.hpp>
 
-#include "Tile.h"
-#include "TiledMap.h"
+#include "Entity.h"
+#include "SpriteComponent.h"
+
 namespace RPGEngine
 {
 	public class Engine{
@@ -19,12 +20,12 @@ namespace RPGEngine
 		private:
 			void Update();
 			void Render();
-
+			Entities::Entity* static_entity;
 			sf::RenderWindow window;
 			sf::Time elapsedTime;
 			sf::Clock clock;
 			sf::Event event;
-			RPGEngine::Map::TiledMap* map;
+			sf::Texture* tex;
 			bool running;
 	};
 }

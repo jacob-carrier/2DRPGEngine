@@ -5,7 +5,7 @@
 
 namespace RPGEngine{
 	namespace Components{
-		class SpriteComponent : Component{
+		class SpriteComponent : public Component{
 			public:
 				SpriteComponent(Entities::Entity* e, sf::Vector2f, sf::Vector2f, int, int);
 				~SpriteComponent();

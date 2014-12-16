@@ -7,12 +7,17 @@ namespace RPGEngine{
 	Engine::Engine(int width, int height, const std::string& title){
 		std::cout << "Engine launching" << std::endl;
 		window.create(sf::VideoMode(width, height), title.c_str());
-		map = new RPGEngine::Map::TiledMap("Data/Maps/forest_path.tmx");
+		static_entity = new Entities::Entity();
+		tex = new sf::Texture();
+		tex->loadFromFile("Data/town95.png");
+		Components::SpriteComponent* sprite = new Components::SpriteComponent(static_entity, sf::Vector2f(0, 0), sf::Vector2f(0, 0), 32, 32);
+		sprite->setSpritesheet(tex);
+		static_entity->RegisterComponent("sprite", sprite);
 		this->running = true;
 	}
 
 	Engine::~Engine(){
-		delete map;
+		
 	}
 
 	void Engine::Run(){
@@ -43,7 +48,7 @@ namespace RPGEngine{
 	void Engine::Render(){
 		window.clear();
 		//Render Here
-		map->Render(window);
+		static_entity->Render(window);
 		window.display();
 	}
 }
