@@ -6,6 +6,7 @@
 
 #include "Entity.h"
 #include "SpriteComponent.h"
+#include "ResourceManager.h"
 
 namespace RPGEngine
 {
@@ -20,7 +21,10 @@ namespace RPGEngine
 		private:
 			void Update();
 			void Render();
+
 			Entities::Entity* static_entity;
+			Resources::ResourceManager* resourceManager;
+
 			sf::RenderWindow window;
 			sf::Time elapsedTime;
 			sf::Clock clock;

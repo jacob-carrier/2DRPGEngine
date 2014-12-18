@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{c05d0b8a-12b6-4657-a83b-ca41773990ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Game Resources">
+      <UniqueIdentifier>{464c098f-d32f-4713-a643-fc0c97b4ef6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Resources">
+      <UniqueIdentifier>{f38e3fa5-7aa3-453a-8fb0-f5ad883b01f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -59,6 +65,15 @@
     </ClInclude>
     <ClInclude Include="SpriteComponent.h">
       <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureResource.h">
+      <Filter>Header Files\Game Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\Game Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseResource.h">
+      <Filter>Header Files\Game Resources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +114,15 @@
     </ClCompile>
     <ClCompile Include="SpriteComponent.cpp">
       <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureResource.cpp">
+      <Filter>Source Files\Game Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\Game Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseResource.cpp">
+      <Filter>Source Files\Game Resources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

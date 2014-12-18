@@ -7,12 +7,17 @@ namespace RPGEngine{
 	Engine::Engine(int width, int height, const std::string& title){
 		std::cout << "Engine launching" << std::endl;
 		window.create(sf::VideoMode(width, height), title.c_str());
+
 		static_entity = new Entities::Entity();
-		tex = new sf::Texture();
-		tex->loadFromFile("Data/town95.png");
+		resourceManager = new Resources::ResourceManager();
+
+		Resources::TextureResource* res = resourceManager->GetResource<Resources::TextureResource>("town95.png");
+
 		Components::SpriteComponent* sprite = new Components::SpriteComponent(static_entity, sf::Vector2f(0, 0), sf::Vector2f(0, 0), 32, 32);
-		sprite->setSpritesheet(tex);
+		sprite->setSpritesheet(res->Texture());
+
 		static_entity->RegisterComponent("sprite", sprite);
+
 		this->running = true;
 	}
 
