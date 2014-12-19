@@ -9,6 +9,7 @@ namespace RPGEngine{
 		class Player : Entity{
 			public:
 				Player();
+				Player(const std::string&);
 				void Update() override;
 				void Render(sf::RenderWindow& window) override;
 			private:

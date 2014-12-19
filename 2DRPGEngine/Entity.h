@@ -16,12 +16,18 @@ namespace RPGEngine{
 		class Entity{
 			public:
 				Entity();
+				Entity(const std::string&);
 				virtual void Update();
 				virtual void Render(sf::RenderWindow& window);
 				void RegisterComponent(const std::string&, Components::Component*);
 				Components::Component* GetComponent(const std::string& componentName) {return components[componentName];};
+				const std::string& getEntityID(){return e_id;};
+				int getEntityUID(){return u_id;};
+				void setEntityUID(int id){u_id = id;};
 			private:
 				std::map<std::string, Components::Component*> components;
+				std::string e_id;
+				int u_id;
 				//Entities::Component* component;				
 		};
 	}

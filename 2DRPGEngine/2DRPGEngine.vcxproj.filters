@@ -75,6 +75,9 @@
     <ClInclude Include="BaseResource.h">
       <Filter>Header Files\Game Resources</Filter>
     </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -123,6 +126,9 @@
     </ClCompile>
     <ClCompile Include="BaseResource.cpp">
       <Filter>Source Files\Game Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

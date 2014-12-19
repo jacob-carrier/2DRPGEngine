@@ -6,6 +6,11 @@ namespace RPGEngine{
 			
 		}
 
+		Entity::Entity(const std::string& entityName){
+			e_id = entityName;
+			u_id = 0;
+		}
+
 		void Entity::RegisterComponent(const std::string& componentName, Components::Component* component){
 			components.insert(std::pair<std::string, Components::Component*>(componentName, component));
 		}

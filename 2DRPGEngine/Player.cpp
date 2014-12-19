@@ -5,6 +5,9 @@ namespace RPGEngine{
 		Player::Player() : Entity(){
 		}
 
+		Player::Player(const std::string& entityName) : Entity(entityName){
+		}
+
 		void Player::Update(){
 
 		}

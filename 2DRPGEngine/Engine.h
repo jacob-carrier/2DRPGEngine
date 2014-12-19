@@ -4,9 +4,9 @@
 #include <SFML\System\Clock.hpp>
 #include <SFML\System\Time.hpp>
 
-#include "Entity.h"
 #include "SpriteComponent.h"
 #include "ResourceManager.h"
+#include "EntityManager.h"
 
 namespace RPGEngine
 {
@@ -23,6 +23,9 @@ namespace RPGEngine
 			void Render();
 
 			Entities::Entity* static_entity;
+			Entities::Entity* static_entity2;
+			Entities::EntityManager* entityManager;
+
 			Resources::ResourceManager* resourceManager;
 
 			sf::RenderWindow window;
